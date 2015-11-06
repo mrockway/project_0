@@ -1,3 +1,7 @@
+.content {
+	background-color: #50575D;
+}
+
 .racingBoard {
 	background-color: #DCAB01;
 	border: 1px solid #000000;
@@ -5,13 +9,19 @@
 	width: 90%;
 }
 
-#p1 {
+.racer1 {
+	background-color: #FF0000;
+	height: 40px;
+	left: 10px;
 	position: relative;
 	top: 10px;
-	left: 10px;
+	width: 40px;
 }
-#p2 {
+.racer2 {
+	background-color: #0000FF;
+	height: 40px;
+	left: 10px;
 	position: relative;
 	top: 10px;
-	left: 10px;
+	width: 40px;
 }
