@@ -1,0 +1,17 @@
+.racingBoard {
+	background-color: #DCAB01;
+	border: 1px solid #000000;
+	height: 300px;
+	width: 90%;
+}
+
+#p1 {
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+#p2 {
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
