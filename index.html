@@ -1,35 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Racing Game</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<!-- custom css -->
-	<link rel="stylesheet" href="main.css">
-</head>
-<body class="content">
-<div class="container">
-	<div class="row">
-		<div class=" racingTitleDiv col-md-12">
-			<h1 class="racingTitle">Racing Game</h1>
+	<head>
+		<meta charset="UTF-8">
+		<title>Pennant Race</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- mlb logos -->
+		<link rel="stylesheet" href="http://daigofuji.github.io/bbclub-font/css/bbclub-font.css">
+		<!-- custom css -->
+		<link rel="stylesheet" href="main.css">
+		<!-- custom font -->
+		<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	</head>
+	<body class="content">
+		<div class="container">
+			<div class="row">
+				<div class=" mlbTitleDiv col-md-12">
+					<h1 class="mlbTitle">Race for the Pennant</h1>
+					<hr>
+				</div> <!-- end title div -->
+			</div> <!-- end title row -->
+			<div class="row">
+				<div class="teamSelect1 col-md-6">
+					<h2>Away Team</h2>
+					<form>
+						<select id="teamName1" onchange="displayTeam1()">
+							<option id="diamondbacks">Arizona Diamondbacks</option>
+							<option id="braves">Atlanta Braves</option>
+							<option id="orioles">Baltimore Orioles</option>
+							<option id="red_sox">Boston Red Sox</option>
+							<option id="cubs">Chicago Cubs</option>
+							<option id="white_sox">Chicago White Sox</option>
+							<option id="reds">Cincinnati Reds</option>
+							<option id="indians">Cleveland Indians</option>
+							<option id="rockies">Colorado Rockies</option>
+							<option id="tigers">Detroit Tigers</option>
+							<option id="astros">Houston Astros</option>
+							<option id="royals">Kansas City Royals</option>
+							<option id="angels">Los Angeles Angels</option>
+							<option id="dodgers">Los Angeles Dodgers</option>
+							<option id="marlins">Miami Marlins</option>
+							<option id="brewers">Milwaukee Brewers</option>
+							<option id="twins">Minnesota Twins</option>
+							<option id="mets">New York Mets</option>
+							<option id="yankees">New York Yankees</option>
+							<option id="as">Oakland Athletics</option>
+							<option id="phillies">Philadelphia Phillies</option>
+							<option id="pirates">Pittsburgh Pirates</option>
+							<option id="padres">San Diego Padres</option>
+							<option id="giants">San Francisco Giants</option>
+							<option id="mariners">Seattle Mariners</option>
+							<option id="cardinals">St Louis Cardinals</option>
+							<option id="rays">Tampa Bay Rays</option>
+							<option id="rangers">Texas Rangers</option>
+							<option id="blue_jays">Toronto Blue Jays</option>
+							<option id="nationals">Washington Nationals</option>
+						</select>
+					</form>
+				</div> <!-- end away team select div -->
+				<div class="teamselect2 col-md-6">
+					<h2>Home Team	</h2>
+					<form>
+						<select id="teamName2" onchange="displayTeam2()">
+							<option id="diamondbacks">Arizona Diamondbacks</option>
+							<option id="braves">Atlanta Braves</option>
+							<option id="orioles">Baltimore Orioles</option>
+							<option id="red_sox">Boston Red Sox</option>
+							<option id="cubs">Chicago Cubs</option>
+							<option id="white_sox">Chicago White Sox</option>
+							<option id="reds">Cincinnati Reds</option>
+							<option id="indians">Cleveland Indians</option>
+							<option id="rockies">Colorado Rockies</option>
+							<option id="tigers">Detroit Tigers</option>
+							<option id="astros">Houston Astros</option>
+							<option id="royals">Kansas City Royals</option>
+							<option id="angels">Los Angeles Angels</option>
+							<option id="dodgers">Los Angeles Dodgers</option>
+							<option id="marlins">Miami Marlins</option>
+							<option id="brewers">Milwaukee Brewers</option>
+							<option id="twins">Minnesota Twins</option>
+							<option id="mets">New York Mets</option>
+							<option id="yankees">New York Yankees</option>
+							<option id="as">Oakland Athletics</option>
+							<option id="phillies">Philadelphia Phillies</option>
+							<option id="pirates">Pittsburgh Pirates</option>
+							<option id="padres">San Diego Padres</option>
+							<option id="giants">San Francisco Giants</option>
+							<option id="mariners">Seattle Mariners</option>
+							<option id="cardinals">St Louis Cardinals</option>
+							<option id="rays">Tampa Bay Rays</option>
+							<option id="rangers">Texas Rangers</option>
+							<option id="blue_jays">Toronto Blue Jays</option>
+							<option id="nationals">Washington Nationals</option>
+						</select>
+					</form>
+				</div> <!-- end home team select div -->
+			</div> <!-- end team select row -->
 			<hr>
-			<button class="restart">Restart race</button>
-		</div> <!-- end of racingTitleDiv -->
-	</div>  <!-- end of racing title row -->
-	<hr>
-	<div class="row">
-		<div class="racingBoard col-md-8 col-offset-2">
-			<div class="racer1"><p id="p1">P1</p></div>
-			<div class="racer2"><p id="p2">P2</p></div>
-		</div> <!-- end of racingBoard div -->
-	</div> <!-- end of racingBoard row -->
-</div>  <!-- end of container -->
-
-
-<!-- jquery -->
-	  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<!-- custom js -->
-	  <script type="text/javascript" src="main.js"></script>	
-</body>
-</html>
+			<div class="scoreBoard row">
+				<div class="awayTeam col-md-5">
+					<h3 id="away"></h3>
+					<h3>Runs: </h3>
+				</div>
+				<div class="vs col-md-1">
+					<h1>vs.</h1>
+				</div>
+				<div class="homeTeam col-md-5"></div>	
+					<h3 id="home"></h3>
+					<h3>Runs: </h3>	
+				</div>
+				<hr>
+				<button class="playBall">Play Ball</button>
+				<button class="restart">Restart</button>
+				<hr>
+				<div class="row">
+					<div class="mound col-md-8 col-offset-2">
+						<div class="timerClass"></div>
+						<div class="awayBall"></div>
+						<div class="homeBall"></div>
+						</div> <!-- end of racingBoard div -->
+						</div> <!-- end of racingBoard row -->
+						</div>  <!-- end of container -->
+						<!-- jquery -->
+						<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+						<!-- handlebars js -->
+						<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+						<!-- custom js -->
+						<script type="text/javascript" src="main.js"></script>
+					</body>
+				</html>

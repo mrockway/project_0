@@ -1,27 +1,75 @@
 .content {
-	background-color: #50575D;
+	background-color: #A57764;
+	/*background-image: url(baseball-field.jpg);*/
+	background-size: contain;
+	font-family: 'Permanent Marker', cursive;
 }
 
-.racingBoard {
-	background-color: #DCAB01;
+.mlbTitle {
+	background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Major_League_Baseball.svg/400px-Major_League_Baseball.svg.png");
+	background-repeat: no-repeat;
+	background-size: 125px;
+	height: 100px;
+	text-align: center;
+	font-size: 50px;
+}
+
+.logo {
+	border-radius: 50px;
+}
+.timerClass {
+	color: #000048;
+	text-align: center;
+	font-size: 100px;
+}
+.mound {
+	background-image: url(divbackground.png);
 	border: 1px solid #000000;
-	height: 300px;
-	width: 90%;
+	width: 1100px;
+	height: 350px;
 }
 
-.racer1 {
-	background-color: #FF0000;
-	height: 40px;
+.awayBall {
+	background-image: url(baseball.png);
+	background-size: contain;
+  height: 89px;
+  left: 10px;
+  position: relative;   
+  top: 38px;
+  width: 89px;
+}
+
+.homeBall {
+	background-image: url(baseball.png);
+	background-size: contain;
+	height: 89px;
 	left: 10px;
 	position: relative;
-	top: 10px;
-	width: 40px;
+	margin-top: 83px;
+	top: 50px;
+	width: 89px;
 }
-.racer2 {
-	background-color: #0000FF;
-	height: 40px;
-	left: 10px;
-	position: relative;
-	top: 10px;
-	width: 40px;
+.spin {
+	-webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+button {
+	text-align: center;
+	margin-left: 250px; 
+	font-size: 30px;
+	height: 50px;
+	width: 200px;
+} 
