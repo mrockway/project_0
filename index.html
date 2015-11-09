@@ -16,8 +16,11 @@
 		<div class="container">
 			<div class="row">
 				<div class=" mlbTitleDiv col-md-12">
-					<h1 class="mlbTitle">Race for the Pennant</h1>
+					<h1 class="mlbTitle title">Race for the Pennant</h1>
 					<hr>
+					<div>
+						<h1 class="title select">Select Teams</h1>
+					</div>
 				</div> <!-- end title div -->
 			</div> <!-- end title row -->
 			<div class="row">
@@ -25,6 +28,7 @@
 					<h2>Away Team</h2>
 					<form>
 						<select id="teamName1" onchange="displayTeam1()">
+							<option>Select a Team</option>
 							<option id="diamondbacks">Arizona Diamondbacks</option>
 							<option id="braves">Atlanta Braves</option>
 							<option id="orioles">Baltimore Orioles</option>
@@ -62,6 +66,7 @@
 					<h2>Home Team	</h2>
 					<form>
 						<select id="teamName2" onchange="displayTeam2()">
+							<option>Select a Team</option>
 							<option id="diamondbacks">Arizona Diamondbacks</option>
 							<option id="braves">Atlanta Braves</option>
 							<option id="orioles">Baltimore Orioles</option>
@@ -96,30 +101,35 @@
 					</form>
 				</div> <!-- end home team select div -->
 			</div> <!-- end team select row -->
-			<hr>
+			<div class="gameBoard">
+				<div class="gameBoard">
 			<div class="scoreBoard row">
 				<div class="awayTeam col-md-5">
-					<h3 id="away"></h3>
-					<h3>Runs: </h3>
+					<h2 id="away"></h2>
+					<h3 class="runs awayRuns">Wins: 0</h3>
 				</div>
-				<div class="vs col-md-1">
+				<div class="vs col-md-2">
 					<h1>vs.</h1>
 				</div>
-				<div class="homeTeam col-md-5"></div>	
-					<h3 id="home"></h3>
-					<h3>Runs: </h3>	
+				<div class="homeTeam col-md-5">	
+					<h2 id="home"></h2>
+					<h3 class="runs homeRuns">Wins: 0</h3>
 				</div>
-				<hr>
+			<hr>	
+			</div>
 				<button class="playBall">Play Ball</button>
-				<button class="restart">Restart</button>
-				<hr>
+				<button class="playNext">Continue Series</button>
+				<button class="restart">Restart Series</button>
+			<hr>
 				<div class="row">
+					<h1 class="seriesWinner displayWinner"></h1>
 					<div class="mound col-md-8 col-offset-2">
 						<div class="timerClass"></div>
-						<div class="awayBall"></div>
-						<div class="homeBall"></div>
-						</div> <!-- end of racingBoard div -->
-						</div> <!-- end of racingBoard row -->
+						<div class="ball awayBall"></div>
+						<div class="ball homeBall"></div>
+						</div> <!-- end of mound div -->
+						</div> <!-- end of mound row -->
+			</div>
 						</div>  <!-- end of container -->
 						<!-- jquery -->
 						<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
