@@ -179,6 +179,7 @@ $(window).keypress(function(event) {
 function determineWinner (p1Pos, p2Pos) {
 	if (p1Pos >=960 && p2Pos < p1Pos ) {
 		$('.displayWinner').text(awayTeam + " Win");
+		$('.displayWinner').show();
 		awayWin++;
 		$('.awayRuns').text('Wins: '+awayWin);
 		$('.playNext').show();
